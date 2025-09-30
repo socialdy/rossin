@@ -1,37 +1,34 @@
-import { Check } from "lucide-react";
-
 export const AboutSection = () => {
   const benefits = [
-    "<strong>Ästhetik und Design</strong>: ABKSTONE bietet eine elegante Palette, die die natürliche Schönheit von Stein, Marmor und Beton in jedes Raumkonzept integriert und so eine moderne und funktionale Gestaltung ermöglicht.",
-    "<strong>Technologische Innovation</strong>: ABKSTONE nutzt kontinuierliche Investitionen in Forschung und Entwicklung, um die besten Leistungseigenschaften von Steinzeug zu maximieren und ästhetische Vielfalt zu schaffen.",
-    "<strong>Vielseitigkeit</strong>: Die großen, modularen Platten von ABKSTONE bieten unzählige Möglichkeiten für die Gestaltung von Böden, Wänden und Oberflächen in modernen Architekturen und Innenräumen.",
-    "<strong>Langfristige Qualität</strong>: ABKSTONE garantiert langlebige Produkte, die resistent gegen Kratzer, Flecken, Säuren und hohe Temperaturen sind, was sie zur perfekten Wahl für anspruchsvolle Anwendungen macht.",
+    "<strong>60 Jahre Designkultur</strong>: Seit 1964 steht Rossin für exzellentes Design im Objekt- und Privatbereich, mit einem tiefen Verständnis für Formschönheit und Wohlbefinden.",
+    "<strong>Innovation und Auszeichnungen</strong>: Rossin hat zahlreiche Design-Awards gewonnen, darunter Red Dot Design Award, Good Design Award und den Interior Innovation Award, was die Innovationskraft und Designexzellenz unterstreicht.",
+    "<strong>International anerkannte Qualität</strong>: Mit Präsenzen im Mittleren Osten und in den USA, sowie internationalen Messebeteiligungen, beweist Rossin seine globale Relevanz und Qualität.",
+    "<strong>Nachhaltige Materialien</strong>: Rossin legt Wert auf umweltfreundliche und hochwertige Materialien, wie POLIMEX® und feuerhemmenden Polyurethan-Schaumstoff, für langlebige und komfortable Möbel.",
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 border-b border-black pb-5 mb-5">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="shadow-xl rounded-lg overflow-hidden">
             <iframe
               width="100%"
               height="415"
-              src="https://www.youtube.com/embed/3WLf6v3pXQY?autoplay=1&mute=1&embeds_referring_euri=https%3A%2F%2Fwww.abkstone.com%2F&source_ve_path=OTY3MTQ"
-              title="ABKSTONE Video"
+              src="https://www.youtube.com/embed/L-K7dmM3_SA"
+              title="Rossin Image Video"
               frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
           </div>
           <div className="animate-fade-in">
-            <h2 className=" mb-6 inline-block">Warum ABKSTONE wählen?</h2>
+            <h2 className="text-3xl font-bold mb-6 inline-block">Warum Rossin wählen?</h2>
             <p className=" mb-8">
-              ABKSTONE bietet innovative Produkte, die modernste Technologie mit der natürlichen Schönheit von Stein kombinieren. Ideal für anspruchsvolle Architekturen und Innenräume, die Funktionalität und Stil vereinen.
+              Rossin steht für Wohlfühloasen, die Funktion und Stil in Einklang bringen. Unsere Polstermöbel schaffen Komfort und Eleganz in jedem Raum, sei es im Hotel, Restaurant, Büro oder Zuhause.
             </p>
             <ul className="space-y-4">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-center gap-3 ">
-                  <Check className="" />
                   <span dangerouslySetInnerHTML={{ __html: benefit }}></span>
                 </li>
               ))}

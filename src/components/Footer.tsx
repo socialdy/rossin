@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#f4f4f4] text-white py-16">
+    <footer className="bg-white text-black py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
           <a href="https://kuechenstudio-bergheim.at" className="">
             <img
-              src="/images/me_logo_black.png" // Ersetze dies durch den tatsächlichen Pfad zu deinem Logo
+              src="/images/me_logo_black.png" 
               alt="Küchenstudio Bergheim Logo"
-              className="h-16 mb-3" // Passe die Größe des Logos an
+              className="h-16 mb-3" 
             />
           </a>
             <p className="">

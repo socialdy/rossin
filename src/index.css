@@ -2,30 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Verlag Condensed';
-  src: url('../fonts/Verlag_Condensed_Bold.otf');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Verlag Condensed';
-  src: url('../fonts/Verlag_Condensed_Book.otf');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Verlag Condensed';
-  src: url('../fonts/Verlag_Condensed_Light.otf');
-  font-weight: 200;
-}
-
 body{
-  font-family: 'Verlag Condensed';
-  font-weight: 400;
-    color: #222222;
-    letter-spacing: 1px;
-    line-height: auto;
+  font-family: Signika, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 140%;
+  color: rgb(34, 34, 34);
+  letter-spacing: normal;
+}
+
+p {
+  font-family: Signika, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 140%;
+  color: rgb(34, 34, 34);
 }
 
 footer p,li,a{
@@ -33,8 +24,8 @@ footer p,li,a{
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Verlag Condensed';
+h1, h3, h4, h5, h6 {
+  font-family: 'Signika', sans-serif;
   font-weight: 700;
   color: #222222;
   font-size: 30px;
@@ -42,10 +33,178 @@ h1, h2, h3, h4, h5, h6 {
   line-height: auto;
 }
 
+h2 {
+  color: rgb(34, 34, 34);
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: 'Signika', sans-serif; /* Ensure Signika is applied */
+}
+
 nav, .mobile{
   line-height: 25px;
     font-size: 13px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+}
+
+/* Header Navigation Styling */
+.naviInner-nav a.nav-link {
+    padding-bottom: 25px;
+    display: block;
+    padding-left: 0px;
+    padding-top: 35px;
+    padding-right: 40px;
+    font-size: 20px;
+}
+
+.naviInner-nav a.nav-link:hover {
+    text-decoration: underline;
+}
+
+.scrolldown {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+}
+
+.scrolldown i {
+  font-size: 24px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+  background: #333333; /* Dark grey */
+}
+
+/* Mobile Menu Styling */
+.mm-menu .mm-search input {
+    background: #bf9d2b;
+    color: #fff;
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding-top: 3px;
+    height: 33px;
+    border-radius: 0;
+}
+
+.mm-noresultsmsg {
+    color: #bf9d2b;
+}
+
+.mm-subclose .glyphicon {
+    font-size: 24px;
+    font-size: 2.4rem;
+    margin-right: 10px;
+    top: 5px;
+}
+
+.mm-menu .mm-list > li > a.mm-subclose {
+    background: #e6e6e6;
+    color: #222;
+}
+
+.mm-list a.mm-subclose {
+    padding-top: 10px;
+}
+
+.mm-list {
+    font-size: 18px;
+}
+
+.mm-list > li {
+    border-top: 1px solid #707173;
+    border-bottom: 1px solid #707173;
+}
+
+.mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after,.mm-menu .mm-list > li > a.mm-subopen:after,.mm-menu .mm-list > li > a.mm-subclose:before {
+    border-bottom: 0;
+    border-color: transparent;
+}
+
+.mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen),.mm-menu .mm-list > li.mm-selected > span {
+    background: none;
+    font-weight: bold;
+}
+
+.mm-list a.mm-subclose {
+    text-indent: 0;
+}
+
+em.mm-counter + a.mm-subopen {
+    padding-left: 0;
+    width: 40px;
+    line-height: 41px;
+    font-size: 24px;
+    font-size: 2.4rem;
+}
+
+em.mm-counter + a.mm-subopen .glyphicon {
+    line-height: 41px;
+    top: 0;
+}
+
+.mm-menu {
+    background: #fff;
+    color: #707173;
+}
+
+.mm-footer nav span {
+    color: #707173;
+}
+
+.mm-menu a,.mm-list > li > a,.mm-list > li > span {
+    color: #222;
+}
+
+.mm-menu .mm-list > li > a.mm-subopen:before {
+    border: 0;
+}
+
+.mmmetaNavi {
+    padding-top: 8px;
+}
+
+.mm-footer nav span {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+}
+
+.mm-footer nav {
+    padding-bottom: 8px;
 }
 
 @layer base {

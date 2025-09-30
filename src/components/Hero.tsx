@@ -1,41 +1,29 @@
 import { useState } from "react";
 
 export const Hero = () => {
-  // Zustand für Mute/Unmute
-  const [isMuted, setIsMuted] = useState(true);
-
-  // Funktion zum Umschalten der Stummschaltung
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
-
   return (
     <section className="relative h-screen flex items-center justify-center">
-      {/* Background Video */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <video
-          id="hero-video"
-          autoPlay
-          loop
-          muted={isMuted}
+        <img
+          src="/public/images/hero_background.png"
+          alt="Rossin Hero Background"
           className="w-full h-full object-cover"
-        >
-          <source
-            src="https://www.abkstone.com/video/ABKSTONE_Natural_Innovation_2021(EN).mp4"
-            type="video/mp4"
-          />
-        </video>
+        />
       </div>
 
-      {/* Mute Button */}
-      <button
-        id="mute-desk"
-        onClick={toggleMute}
-        className="absolute bottom-0 left-[8.33%] z-[8990] mb-[50px] px-[30px] py-[8px] cursor-pointer text-xs uppercase text-black border-b-2 border-[#d2006c] bg-gradient-to-b from-white/60 to-white/60
-"
-      >
-        {isMuted ? "Entstummen" : "Stummen"}
-      </button>
+      {/* Scroll Down and Pagination */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center mb-8 z-10">
+        <a href="#produkte" className="scrolldown d-flex text-white flex-col items-center mb-4" tabIndex={0}>
+          SCROLL
+          <i className="fal fa-chevron-down mt-2"></i>
+        </a>
+        <ul className="slick-dots" role="tablist">
+          <li className="slick-active" role="presentation">
+            <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 1" tabIndex={0} aria-selected={true}>1</button>
+          </li>
+        </ul>
+      </div>
     </section>
   );
 };

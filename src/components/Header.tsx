@@ -9,50 +9,54 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white border-b border-[#f5f5f5] shadow-md">
+    <header className="fixed w-full top-0 z-50 bg-[#ffffff] border-b border-[#f5f5f5] shadow-md">
       <div className="container mx-auto px-6 md:px-12">
         <nav className="flex items-center justify-between h-20">
           {/* Logo Section */}
           <div className="flex items-center space-x-4">
-            <a href="/" className="h-6 sm:h-6">
+            <a href="/" className="h-8 sm:h-10">
               <img
-                src="/images/abkstone_logo.svg"
-                alt="ABK Stone Logo"
-                className="h-full"
+                src="/public/images/rossin.png"
+                alt="Rossin Logo"
+                className="h-full w-auto"
               />
             </a>
-            <a href="https://kuechenstudio-bergheim.at" className="h-12 sm:h-16">
-              <img
-                src="/images/me_logo_black.png"
-                alt="Küchenstudio Bergheim Logo"
-                className="h-full"
-              />
-            </a>
+            {/* Removed the second logo/link here as it seems it was specific to Küchenstudio Bergheim */}
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-10">
-            <a
-              href="#produkte"
-              className=""
-            >
-              Produkte
-            </a>
-            <a
-              href="#ueber-abk-stone"
-              className=""
-            >
-              Über ABK Stone            
-            </a>
-            <a
-              href="/#referenzen"
-              className=""
-            >
-              Referenzen
-            </a>
-            <a href="/#beratung">
-                Jetzt Beratung anfordern
-            </a>
+          <div className="hidden lg:flex items-center">
+            <ul className="naviInner-nav flex items-center gap-10">
+              <li>
+                <a
+                  href="#produkte"
+                  className="nav-link"
+                >
+                  Produkte
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#ueber-rossin"
+                  className="nav-link"
+                >
+                  Über Uns
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#referenzen"
+                  className="nav-link"
+                >
+                  Referenzen
+                </a>
+              </li>
+              <li>
+                <a href="/#beratung" className="nav-link">
+                    Jetzt Beratung anfordern
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* Hamburger Menu Icon */}
@@ -85,26 +89,26 @@ export const Header = () => {
             <div className="flex flex-col items-start gap-4 py-6 pl-6">
               <a
                 href="/#produkte"
-                className="uppercase transition-all"
+                className="transition-all text-lg"
                 onClick={toggleMobileMenu}
               >
                 Produkte
               </a>
               <a
-                href="/#ueber-abk-stone"
-                className=" uppercase transition-all"
+                href="/#ueber-rossin"
+                className="transition-all text-lg"
                 onClick={toggleMobileMenu}
               >
-                Über ABK Stone
+                Über Uns
               </a>
               <a
                 href="/#referenzen"
-                className=" uppercase transition-all"
+                className="transition-all text-lg"
                 onClick={toggleMobileMenu}
               >
                 Referenzen
               </a>
-              <a href="/#beratung" className="uppercase transition-all">
+              <a href="/#beratung" className="transition-all text-lg">
                 Jetzt Beratung anfordern
             </a>
             </div>
