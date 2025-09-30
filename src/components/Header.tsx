@@ -16,7 +16,7 @@ export const Header = () => {
           <div className="flex items-center space-x-4">
             <a href="/" className="h-8 sm:h-10">
               <img
-                src="/public/images/rossin.png"
+                src="/images/rossin.png"
                 alt="Rossin Logo"
                 className="h-full w-auto"
               />
