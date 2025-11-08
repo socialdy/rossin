@@ -1,15 +1,16 @@
-import { useState } from "react";
-
 export const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/hero_background.png"
-          alt="Hero Background"
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-        />
+        <iframe
+          src="https://www.youtube.com/embed/L-K7dmM3_SA?autoplay=1&mute=1&loop=1&playlist=L-K7dmM3_SA&controls=0"
+          title="Rossin Image Video"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          className="absolute inset-0 w-full h-full -z-10"
+        ></iframe>
       </div>
 
       {/* Scroll Down and Pagination */}
