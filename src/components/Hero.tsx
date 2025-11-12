@@ -4,7 +4,7 @@ export const Hero = () => {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <iframe
-          src="https://www.youtube.com/embed/?autoplay=1&mute=1&loop=1&playlist=L-K7dmM3_SA&controls=0"
+          src="https://www.youtube.com/watch?v=NCwR5Gju3lU?autoplay=1&mute=1&loop=1&playlist=L-K7dmM3_SA&controls=0"
           title="Rossin Image Video"
           frameBorder="0"
           allow="autoplay; encrypted-media"
