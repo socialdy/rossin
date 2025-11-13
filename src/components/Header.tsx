@@ -14,7 +14,19 @@ export const Header = () => {
         <nav className="flex items-center justify-between h-20">
           {/* Logo Section */}
           <div className="flex items-center space-x-4">
-            <a href="/" className="h-8 sm:h-10">
+            <a
+              href="https://kuechenstudio-bergheim.at"
+              className="h-10 sm:h-12"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/me_logo_black.png"
+                alt="ME Logo"
+                className="h-full w-auto"
+              />
+            </a>
+            <a href="/" className="h-6 sm:h-7">
               <img
                 src="/images/rossin.png"
                 alt="Rossin Logo"
